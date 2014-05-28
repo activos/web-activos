@@ -1,0 +1,186 @@
+﻿@using System.Web.Optimization
+@using sistema.activos.web.Helpers
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Administracion &bull; Activos Fijos</title>
+
+    @Styles.Render("~/css")
+</head>
+<body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Admin Activos Fijos</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.MenuLink("Inicio", "Index", "Home")</li>
+                    <li>@Html.MenuLink("Contactanos", "Contact", "Home")</li>
+                </ul>
+                <div class="navbar-btn navbar-right">
+                    @using (Html.BeginForm("CerrarSesion", "Account",FormMethod.Post))
+                    {
+                        <input type="submit" class="btn btn-primary" value="Cerrar Sesion" />
+                    }
+                </div>
+
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    <div class="container">
+        <noscript>
+            <div class="alert">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Warning!</strong> Please enable JavaScript in your browser!
+            </div>
+        </noscript>
+
+        <div class="row">
+            @if (IsSectionDefined("sidebar"))
+            {
+                <div class="span2">
+                    @RenderSection("sidebar", required: false)
+                </div>
+            }
+
+            <div id="content" @(IsSectionDefined("sidebar") ? Html.Raw("class=span10") : Html.Raw("class=span12"))>
+                @if (IsSectionDefined("featured"))
+                {
+                    <div>
+                        <div class="hero-unit">
+                            @RenderSection("featured", required: false)
+                        </div>
+                    </div>
+                }
+                <div>
+                    <div class="col-md-3">
+                        <div class="container">
+                            <div class="row">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Parametros<span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Tipo de Depreciacion</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fecha Depreciacion</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Dias Gestion</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Motivo Baja</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Proveedores</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Tipo de Cambio</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Tipo de Cambio BCB</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fuente Financiamiento</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Organismo Financiador</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Partida Presupuestaria</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Grupo Contable</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Auxiliar Contable</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fotografias</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Ambientes</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Aprobar tareas Por Auxiliares</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Tipos de Cambio UFVs y dolares</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Asociaciones<span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Asociar Nro. Serie</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Asociar Factura</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Asociar Fotografia</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Asociar Ambiente Fisico</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Activo Fijo<span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nuevo Activo</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Baja de Activo</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Revalorizacion</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Modificar Lote</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Reposiciones</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Modificar Activo</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Accesorio Muebles</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Asignar Responsable</a></li>
+                                    <li><a href="#">Codigo Barra</a></li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Transferencias<span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Tranferir</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Aceptar Transferencia</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Transferir por</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Aceptar Tranferencia por</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Devolver</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Devolver Por</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Aceptar Devolucion</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reportes<span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Actualizar y Depreciacion de Activos Fijos</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Transacciones de Activos Fijos</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Reporte de Facturas</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Reporte de Bitacora de Mantenimiento</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Reportes Consolidados de Activos Fijos</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Detalle de Activos Fijos</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Catalogo de Fotografias</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Consultas y Busquedas<span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Motor de Consultas</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Busquedas</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Inventariacion<span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Inventariacion de Activos Fijos</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Impresion de Inventario</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Bitacora</a></li>
+                                    <li><a href="#">Logs de Transaccion</a></li>
+                                    <li><a href="#">Almacen Accesorio</a></li>
+                                    <li><a href="#">Prestamos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="row">
+        <div class="span12">
+            <footer id="footer">
+                &copy; 2014 Sistema de Activos Fijos
+            </footer>
+        </div>
+    </div>
+    </div>
+    @Scripts.Render("~/js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,34 @@
+@media (min-width: 980px) {
+    body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    background-image: url("/Content/images/glyphicons-halflings.png");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #dcdcdc;
+}
+
+#header {
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+#body {
+    padding: 50px;
+    padding-bottom: 50px; /* Altura del footer */
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px; /* Altura del footer */
+}

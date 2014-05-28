@@ -1,0 +1,10 @@
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.repository\bin\Debug\sistema.activos.repository.dll.config
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.repository\bin\Debug\sistema.activos.repository.dll
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.repository\bin\Debug\sistema.activos.repository.pdb
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.repository\bin\Debug\EntityFramework.dll
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.repository\bin\Debug\EntityFramework.xml
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.repository\obj\Debug\sistema.activos.repository.csprojResolveAssemblyReference.cache
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.repository\obj\Debug\sistema.activos.repository.dll
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.repository\obj\Debug\sistema.activos.repository.pdb

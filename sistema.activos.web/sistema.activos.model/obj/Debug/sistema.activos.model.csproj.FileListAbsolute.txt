@@ -1,0 +1,11 @@
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.model\bin\Debug\sistema.activos.model.dll
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.model\bin\Debug\sistema.activos.model.pdb
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.model\bin\Debug\sistema.activos.entidades.dll
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.model\bin\Debug\sistema.activos.entidades.pdb
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.model\obj\Debug\sistema.activos.model.csprojResolveAssemblyReference.cache
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.model\obj\Debug\sistema.activos.model.dll
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.model\obj\Debug\sistema.activos.model.pdb
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.model\bin\Debug\EntityFramework.dll
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.model\bin\Debug\sistema.activos.repository.dll
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.model\bin\Debug\sistema.activos.repository.pdb
+C:\slnSistemaMVC\sistema.activos.web\sistema.activos.model\bin\Debug\EntityFramework.xml

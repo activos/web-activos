@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0586792-D8A5-4585-B7C9-D0621D4D4E66}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>sistema.activos.repository</RootNamespace>
+    <AssemblyName>sistema.activos.repository</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accesorio.cs" />
+    <Compile Include="ActasDeActivo.cs" />
+    <Compile Include="Activo.cs" />
+    <Compile Include="ActivosModel.cs" />
+    <Compile Include="Area.cs" />
+    <Compile Include="AsignacionTipoDeCambio.cs" />
+    <Compile Include="AuxiliarContable.cs" />
+    <Compile Include="Auxiliare.cs" />
+    <Compile Include="BajasDeActivo.cs" />
+    <Compile Include="Cargo.cs" />
+    <Compile Include="EstadoActivo.cs" />
+    <Compile Include="FacturaActivo.cs" />
+    <Compile Include="FotosActivo.cs" />
+    <Compile Include="FuenteFinaciamiento.cs" />
+    <Compile Include="GrupoContable.cs" />
+    <Compile Include="LogsActivo.cs" />
+    <Compile Include="LogsTranferenciaActivo.cs" />
+    <Compile Include="LoteActivo.cs" />
+    <Compile Include="MotivoRevalorizacionesActivo.cs" />
+    <Compile Include="MotivosDeBaja.cs" />
+    <Compile Include="Oficina.cs" />
+    <Compile Include="OrganismoFinanciador.cs" />
+    <Compile Include="PartidasPresupuestaria.cs" />
+    <Compile Include="Personal.cs" />
+    <Compile Include="PorcentajeDeDepreciacion.cs" />
+    <Compile Include="PrestamosActivo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedore.cs" />
+    <Compile Include="Puesto.cs" />
+    <Compile Include="PuestoActual.cs" />
+    <Compile Include="Regionale.cs" />
+    <Compile Include="RevalorizacionesActivo.cs" />
+    <Compile Include="sysdiagram.cs" />
+    <Compile Include="TipoCambio.cs" />
+    <Compile Include="TipoUsuario.cs" />
+    <Compile Include="Unidad.cs" />
+    <Compile Include="Usuario.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
